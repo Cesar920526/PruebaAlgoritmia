@@ -18,7 +18,7 @@ class NumeroTest {
 
     @Test
     void numeroPar() {
-        assertEquals(true, Numero.numeroPar(100));
+        assertEquals(true, Numero.numeroPar(0));
     }
 
     @Test
