@@ -2,67 +2,39 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ArreglosTest {
 
     @Test
     void sumaArreglo() {
-        ArrayList<Integer> arregloDeNumero = new ArrayList<>();
-        arregloDeNumero.add(1);
-        arregloDeNumero.add(2);
-        arregloDeNumero.add(3);
-        arregloDeNumero.add(4);
-
-        assertEquals(10, arregloDeNumero);
+        int[] enteros = {1,2,3,4};
+        assertEquals(10, Arreglos.sumaArreglo(enteros));
     }
 
     @Test
     void multiplicacionArreglo() {
-        ArrayList<Integer> arregloDeNumero = new ArrayList<>();
-        arregloDeNumero.add(1);
-        arregloDeNumero.add(2);
-        arregloDeNumero.add(3);
-        arregloDeNumero.add(4);
-
-        assertEquals(24, arregloDeNumero);
+        int[] enteros = {1,2,3,4};
+        int[] respuesta = {2,4,6,8};
+        assertArrayEquals(respuesta, Arreglos.multiplicacionArreglo(enteros, 2));
     }
 
     @Test
     void numerosParesArreglo() {
-        ArrayList<Integer> arregloDeNumero = new ArrayList<>();
-        arregloDeNumero.add(0);
-        arregloDeNumero.add(1);
-        arregloDeNumero.add(2);
-        arregloDeNumero.add(3);
-        arregloDeNumero.add(4);
-
-        assertEquals(3, arregloDeNumero);
+        int[] enteros = {1,2,3,4};
+        assertEquals(2, Arreglos.numerosParesArreglo(enteros));
     }
 
     @Test
     void numerosImparesArreglo() {
-        ArrayList<Integer> arregloDeNumero = new ArrayList<>();
-        arregloDeNumero.add(0);
-        arregloDeNumero.add(1);
-        arregloDeNumero.add(2);
-        arregloDeNumero.add(3);
-        arregloDeNumero.add(4);
-
-        assertEquals(2, arregloDeNumero);
+        int[] enteros = {1,2,3,4};
+        assertEquals(2, Arreglos.numerosImparesArreglo(enteros));
     }
 
     @Test
     void arregloDeArreglos() {
-        ArrayList<Integer> arregloDeNumero = new ArrayList<>();
-        arregloDeNumero.add(0);
-        arregloDeNumero.add(1);
-        arregloDeNumero.add(2);
-        arregloDeNumero.add(3);
-        arregloDeNumero.add(4);
-
-        assertArrayEquals();
+        int[] enteros = {1,2,3,4,5};
+        int[][] arregloTotal = {{1,2,0},{3,4,5}};
+        assertArrayEquals(arregloTotal, Arreglos.arregloDeArreglos(enteros, 3));
     }
 }
